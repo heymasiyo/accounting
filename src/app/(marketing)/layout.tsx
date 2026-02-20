@@ -3,5 +3,9 @@ export default function MarketingLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return children;
+  return (
+    <div className="flex min-h-svh flex-col">
+      <main className="flex-1">{children}</main>
+    </div>
+  );
 }
