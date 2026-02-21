@@ -38,7 +38,7 @@ export function MainNav() {
 
           return (
             <NavigationMenuItem key={index}>
-              <NavigationMenuTrigger className="text-muted-foreground hover:text-foreground focus-visible:text-foreground transition-colors">
+              <NavigationMenuTrigger className="text-muted-foreground hover:text-foreground focus-visible:text-foreground px-3 transition-colors">
                 {link.title}
               </NavigationMenuTrigger>
 

@@ -111,6 +111,7 @@ function MobileLink({
   className?: string;
 }) {
   const router = useRouter();
+
   return (
     <Link
       href={href}
