@@ -4,7 +4,7 @@ import { MARKETING_FOOTER_LINKS } from "@/lib/constants/nav";
 
 export function SiteFooter() {
   return (
-    <footer className="bg-background z-2 border-t">
+    <footer className="bg-background z-1 border-t">
       <div className="mx-auto flex w-full max-w-7xl flex-col flex-wrap gap-12 px-6 py-24 lg:flex-row lg:flex-nowrap lg:gap-4 lg:px-16">
         <div className="w-full basis-1/6">
           <Link href="/" className="block">

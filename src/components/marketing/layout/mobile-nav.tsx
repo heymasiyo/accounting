@@ -65,7 +65,7 @@ export function MobileNav() {
         alignOffset={-16}
         sideOffset={16}
       >
-        <div className="flex flex-col gap-12 overflow-auto px-6 py-6">
+        <div className="flex flex-col gap-12 overflow-auto px-6 py-8">
           {MARKETING_HEADER_DESC_LINKS.map((link, index) => {
             if (!link.items) {
               return (

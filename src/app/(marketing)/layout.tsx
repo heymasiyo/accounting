@@ -8,7 +8,7 @@ export default function MarketingLayout({
 }>) {
   return (
     <div className="flex min-h-svh flex-col">
-      <div className="pointer-events-none fixed inset-0 z-1 mx-auto hidden w-full max-w-7xl xl:block">
+      <div className="pointer-events-none fixed inset-0 mx-auto hidden w-full max-w-7xl xl:block">
         <div className="absolute top-0 bottom-0 w-px border-l" />
 
         <div className="absolute top-0 right-0 bottom-0 w-px border-r" />
