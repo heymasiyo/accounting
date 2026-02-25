@@ -224,12 +224,16 @@ export const MARKETING_FOOTER_LINKS = [
         href: "/contact",
       },
       {
-        title: "Privacy Policy",
+        title: "Privacy",
         href: "/privacy",
       },
       {
-        title: "Terms of Service",
+        title: "Terms",
         href: "/terms",
+      },
+      {
+        title: "DPA",
+        href: "/dpa",
       },
     ],
   },
