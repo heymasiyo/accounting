@@ -220,16 +220,16 @@ export const MARKETING_FOOTER_LINKS = [
     title: "About",
     items: [
       {
-        title: "Contact us",
+        title: "Contact",
         href: "/contact",
       },
       {
-        title: "Privacy policy",
+        title: "Privacy Policy",
         href: "/privacy",
       },
       {
-        title: "Terms & conditions",
-        href: "/terms-and-conditions",
+        title: "Terms of Service",
+        href: "/terms",
       },
     ],
   },
