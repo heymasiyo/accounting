@@ -8,7 +8,7 @@ export function SiteFooter() {
       <div className="mx-auto flex w-full max-w-7xl flex-col flex-wrap gap-12 px-6 py-24 lg:flex-row lg:flex-nowrap lg:gap-4 lg:px-16">
         <div className="w-full basis-1/6">
           <Link href="/" className="block">
-            <div className="border-foreground size-4 rounded-full border-4 bg-transparent" />
+            <div className="border-foreground size-5 rounded-full border-5 bg-transparent" />
 
             <span className="sr-only">Home</span>
           </Link>
