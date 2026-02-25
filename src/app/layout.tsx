@@ -3,6 +3,7 @@ import "@/styles/globals.css";
 import type { Metadata } from "next";
 
 import { ThemeProvider } from "@/components/theme-provider";
+import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { fontVariables } from "@/lib/fonts";
 
@@ -34,7 +35,11 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <TooltipProvider>{children}</TooltipProvider>
+          <TooltipProvider>
+            {children}
+
+            <Toaster position="top-right" richColors />
+          </TooltipProvider>
         </ThemeProvider>
       </body>
     </html>
