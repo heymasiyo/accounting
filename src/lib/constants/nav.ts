@@ -1,3 +1,21 @@
+import {
+  Building,
+  ChartLine,
+  Contact2,
+  CreditCard,
+  DollarSign,
+  Home,
+  Package,
+  PieChart,
+  ShoppingBag,
+  ShoppingCart,
+  Table,
+  Tag,
+  Warehouse,
+} from "lucide-react";
+
+import { NavGroup } from "@/lib/types";
+
 export const MARKETING_HEADER_DESC_LINKS = [
   {
     title: "Features",
@@ -238,3 +256,194 @@ export const MARKETING_FOOTER_LINKS = [
     ],
   },
 ];
+
+export function sidebarNavData({ slug }: { slug: string }) {
+  const sidebarNav: NavGroup[] = [
+    {
+      title: "",
+      items: [
+        {
+          title: "Home",
+          url: `/workspace/${slug}`,
+          icon: Home,
+        },
+      ],
+    },
+    {
+      title: "Operations",
+      items: [
+        {
+          title: "Sales",
+          icon: ShoppingCart,
+          items: [
+            {
+              title: "Overview",
+              url: `/workspace/${slug}/sales/overview`,
+              icon: PieChart,
+            },
+            {
+              title: "Invoices",
+              url: `/workspace/${slug}/sales/invoices`,
+              icon: Tag,
+            },
+            {
+              title: "Deliveries",
+              url: `/workspace/${slug}/sales/deliveries`,
+              icon: Tag,
+            },
+            {
+              title: "Orders",
+              url: `/workspace/${slug}/sales/orders`,
+              icon: Tag,
+            },
+            {
+              title: "Quotes",
+              url: `/workspace/${slug}/sales/quotes`,
+              icon: Tag,
+            },
+          ],
+        },
+        {
+          title: "Purchases",
+          icon: ShoppingBag,
+          items: [
+            {
+              title: "Overview",
+              url: `/workspace/${slug}/purchases/overview`,
+              icon: PieChart,
+            },
+            {
+              title: "Invoices",
+              url: `/workspace/${slug}/purchases/invoices`,
+              icon: Tag,
+            },
+            {
+              title: "Deliveries",
+              url: `/workspace/${slug}/purchases/deliveries`,
+              icon: Tag,
+            },
+            {
+              title: "Orders",
+              url: `/workspace/${slug}/purchases/orders`,
+              icon: Tag,
+            },
+            {
+              title: "Quotes",
+              url: `/workspace/${slug}/purchases/quotes`,
+              icon: Tag,
+            },
+          ],
+        },
+        {
+          title: "Expenses",
+          url: `/workspace/${slug}/expenses`,
+          icon: CreditCard,
+        },
+        {
+          title: "Products",
+          url: `/workspace/${slug}/products`,
+          icon: Package,
+        },
+        {
+          title: "Inventory",
+          url: `/workspace/${slug}/warehouses`,
+          icon: Warehouse,
+        },
+      ],
+    },
+    {
+      title: "Finance",
+      items: [
+        {
+          title: "Reports",
+          url: `/workspace/${slug}/reports`,
+          icon: ChartLine,
+        },
+        {
+          title: "Cash & Bank",
+          url: `/workspace/${slug}/banks`,
+          icon: DollarSign,
+        },
+        {
+          title: "Accounts",
+          url: `/workspace/${slug}/accounts`,
+          icon: Table,
+        },
+        {
+          title: "Fixed Assets",
+          url: `/workspace/${slug}/fixed-assets`,
+          icon: Building,
+        },
+      ],
+    },
+    {
+      title: "Directory",
+      items: [
+        {
+          title: "Contacts",
+          url: `/workspace/${slug}/contacts`,
+          icon: Contact2,
+        },
+      ],
+    },
+  ];
+
+  return sidebarNav;
+}
+
+export function quickActionsData({ slug }: { slug: string }) {
+  const quickActions: NavGroup[] = [
+    {
+      title: "Suggestions",
+      items: [
+        {
+          title: "Create sale",
+          url: `/workspace/${slug}/sales/invoices/add`,
+          icon: ShoppingCart,
+        },
+        {
+          title: "Create purchase",
+          url: `/workspace/${slug}/sales/purchases/add`,
+          icon: ShoppingBag,
+        },
+        {
+          title: "Record expense",
+          url: `/workspace/${slug}/expenses/add`,
+          icon: CreditCard,
+        },
+      ],
+    },
+    {
+      title: "Quick action",
+      items: [
+        {
+          title: "Add product",
+          url: `/workspace/${slug}/products/add`,
+          icon: Package,
+        },
+        {
+          title: "Add warehouse",
+          url: `/workspace/${slug}/warehouses/add`,
+          icon: Warehouse,
+        },
+        {
+          title: "Add account",
+          url: `/workspace/${slug}/accounts/add`,
+          icon: Table,
+        },
+        {
+          title: "Add fixed asset",
+          url: `/workspace/${slug}/fixed-assets/add`,
+          icon: Building,
+        },
+        {
+          title: "Add contact",
+          url: `/workspace/${slug}/contacts/add`,
+          icon: Contact2,
+        },
+      ],
+    },
+  ];
+
+  return quickActions;
+}

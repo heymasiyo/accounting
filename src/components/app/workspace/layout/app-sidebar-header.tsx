@@ -10,7 +10,7 @@ import {
   Settings,
   Users2,
 } from "lucide-react";
-import { useParams, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 import * as React from "react";
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -35,15 +35,14 @@ import {
 } from "@/components/ui/sidebar";
 import { useWorkspaces } from "@/lib/swr/use-workspace";
 
-export function AppSidebarHeader() {
+export function AppSidebarHeader({ slug }: { slug: string }) {
   const router = useRouter();
-  const params = useParams<{ slug: string }>();
 
   const { workspaces } = useWorkspaces();
 
   const activeWorkspace = React.useMemo(() => {
-    return workspaces.find((workspace) => workspace.slug === params.slug);
-  }, [workspaces, params.slug]);
+    return workspaces.find((workspace) => workspace.slug === slug);
+  }, [workspaces, slug]);
 
   if (!activeWorkspace) return null;
 
@@ -92,7 +91,7 @@ export function AppSidebarHeader() {
 
             <DropdownMenuItem
               className="cursor-pointer"
-              onClick={() => router.push(`/workspace/${params.slug}/settings`)}
+              onClick={() => router.push(`/workspace/${slug}/settings`)}
             >
               <Settings className="text-muted-foreground" />
               Settings
@@ -155,7 +154,7 @@ export function AppSidebarHeader() {
               <DropdownMenuItem
                 className="cursor-pointer"
                 onClick={() =>
-                  router.push(`/workspace/${params.slug}/settings/members`)
+                  router.push(`/workspace/${slug}/settings/members`)
                 }
               >
                 <Users2 className="text-muted-foreground" />
@@ -165,7 +164,7 @@ export function AppSidebarHeader() {
               <DropdownMenuItem
                 className="cursor-pointer"
                 onClick={() =>
-                  router.push(`/workspace/${params.slug}/settings/billing`)
+                  router.push(`/workspace/${slug}/settings/billing`)
                 }
               >
                 <CreditCard className="text-muted-foreground" />
