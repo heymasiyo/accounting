@@ -2,6 +2,7 @@ import "@/styles/globals.css";
 
 import type { Metadata } from "next";
 
+import { BreadcrumbProvider } from "@/components/breadcrumb-provider";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -36,9 +37,11 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <TooltipProvider>
-            {children}
+            <BreadcrumbProvider>
+              {children}
 
-            <Toaster position="top-right" richColors />
+              <Toaster position="top-right" richColors />
+            </BreadcrumbProvider>
           </TooltipProvider>
         </ThemeProvider>
       </body>
